@@ -2,17 +2,17 @@
 	.text
 	.section	.rodata
 .LC0:
-	.string	"size of char: %zu byte(s) \n"
+	.string	"Size of a char: %ld byte(s)\n"
 .LC1:
-	.string	"size of int: %zu byte(s) \n"
+	.string	"Size of an int: %ld byte(s)\n"
 	.align 8
 .LC2:
-	.string	"size of long int: %zu byte(s) \n"
+	.string	"Size of a long int: %ld byte(s)\n"
 	.align 8
 .LC3:
-	.string	"size of long long int: %zu byte(s) \n"
+	.string	"Size of a long long int: %ld byte(s)\n"
 .LC4:
-	.string	"size of float: %zu byte(s) \n"
+	.string	"Size of a float: %ld byte(s)\n"
 	.text
 	.globl	main
 	.type	main, @function
