@@ -19,5 +19,5 @@ if (a / 10)
 {
 print_number(a / 10);
 }
-_putchar( a % 10 + '0');
+_putchar(a % 10 + '0');
 }
