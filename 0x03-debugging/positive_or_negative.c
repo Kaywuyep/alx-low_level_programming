@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * positive_or_negative - writes positive or negative number
- * @i: int type value 
+ * positive_or_negative - A function that writes a positive or negative integer
+ * @i: int type number
  */
 
 void positive_or_negative(int i)
