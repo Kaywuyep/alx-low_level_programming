@@ -1,1 +1,1 @@
-This repo contains my first scripts in the C programming
+ this directory contains the basics of the low level programming language
