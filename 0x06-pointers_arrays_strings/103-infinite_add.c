@@ -30,7 +30,7 @@ r[--size_r] = (sum % 10) + '0';
 a--;
 b--;
 }
-if (size_r > 0 && r[size_r - 1] == '\0')
+if (size_r > 0 && r[size_r - 2] == '\0')
 size_r--;
 for (a = 0; size_r > a; a++)
 r[a] = r[a + (len1 + len2 - size_r)];
