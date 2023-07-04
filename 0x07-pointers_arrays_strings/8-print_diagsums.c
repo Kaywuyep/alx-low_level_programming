@@ -8,14 +8,24 @@
 */
 void print_diagsums(int *a, int size)
 {
-int total = 0;
-int sum = 0;
-int i = 0;
-for (; i < size; i++)
+int i, sum, sizer;
+i = 0;
+sum = 0;
+sizer = size * size;
+while (i < sizer)
 {
-total = total + a[i * size + i];
+if (i % (size + 1) == 0)
+sum += a[i];
+i++;
 }
-for (i = size - 1; i >= 0; i--)
-sum += a[i * size + (size - i - 1)];
-printf("%d,%d\n", total, sum);
+printf("%d, ", sum);
+sum = 0;
+i = 0;
+while (i < sizer)
+{
+if (i % (size - 1) == 0 && i != (sizer - 1) && i != 0)
+sum += a[i];
+i++;
+}
+printf("%d\n", sum);
 }
