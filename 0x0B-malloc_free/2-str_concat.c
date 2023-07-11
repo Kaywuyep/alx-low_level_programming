@@ -20,15 +20,13 @@ for (i = 0; s1[i] != '\0'; i++)
 ;
 for (j = 0; s2[j] != '\0'; j++)
 ;
-con = (char *)malloc((strlen(s1) + strlen(s2) + 1) * sizeof(char));
+con = (char *)malloc((i + j + 1) * sizeof(char));
 if (con == NULL)
 return (NULL);
-for (a = 0, b = 0; a < (i + j + 1); a++)
-{
-if (a < i)
+for (a = 0; a < i; a++)
 con[a] = s1[a];
-else
-con[a] = s2[b++];
-}
+for (b = 0; b < j; b++)
+con[a + b] = s2[b];
+con[a + b] = '\0';
 return (con);
 }
