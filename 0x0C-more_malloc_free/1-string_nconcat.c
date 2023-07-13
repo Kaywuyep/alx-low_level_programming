@@ -16,8 +16,10 @@ if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
-for (a = 0; s1[a] != '\0'; a++);
-for (b = 0; s2[b] != '\0'; b++);
+for (a = 0; s1[a] != '\0'; a++)
+;
+for (b = 0; s2[b] != '\0'; b++)
+;
 if (n > b)
 n = b;
 c = a + n;
