@@ -11,7 +11,7 @@ char *str_concat(char *s1, char *s2)
 {
 char *con; /*concatenates*/
 unsigned int i, j, a, b;
-
+/*assign to an empty string*/
 if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
