@@ -6,24 +6,30 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t count = 0;/*count number of nodes in list*/
-	long int d;/*variable that stores difference in*/
-	/*memory address of current and next nodes*/
+	size_t count = 0;
+	const listint_t *current = head;
+	const listint_t *visited[1024] = {NULL};/*Hash tble for visited nodes*/
+	size_t i;
 
-	while (head)
+	while (current != NULL)
 	{
-		d = head - head->next;/*cal difference in mem address*/
-		count++;/*increment node count*/
-		printf("[%p] %d\n", (void *)head, head->n);
-		/*print address and value of current node*/
-		if (d > 0)/*if diff is positive (no loop detected)*/
-			head = head->next;/*move to next node*/
-		else
+		/*Check if the current node is already visited*/
+		for (i = 0; i < count; i++)
 		{
-			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-			/*print address and value of next node*/
-			break;/*break to avoid infinite looping*/
+			if (current == visited[i])
+			{
+				printf("-> [%p] %d\n", (void *)current, current->n);
+				return (count);
+			}
 		}
+
+		/*Add the current node to the visited array*/
+		visited[count] = current;
+		count++;
+		/*Print the current node*/
+		printf("[%p] %d\n", (void *)current, current->n);
+		/*Move to the next node*/
+		current = current->next;
 	}
 
 	return (count);

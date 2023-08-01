@@ -14,6 +14,7 @@ int pop_listint(listint_t **head)
 
 	data = (*head)->n;/*store data in the head node*/
 	temp = *head;/*move head ptr to the next node*/
+	*head = (*head)->next;/*move head ptr to next node*/
 	free(temp);
 
 	return (data);
