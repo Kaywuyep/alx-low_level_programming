@@ -19,7 +19,7 @@ int _putchar(char c);
 void handle_error(int from_filename, int to_filename, char *argv[]);
 int copy_file(char *from_filename, char *to_filename, char *args[]);
 
-void check_elf(int elf, unsigned char *e_ident);
+void check_elf(unsigned char *e_ident);
 void print_magic(unsigned char *e_ident);
 void print_class(unsigned char *e_ident);
 void print_data(unsigned char *e_ident);
