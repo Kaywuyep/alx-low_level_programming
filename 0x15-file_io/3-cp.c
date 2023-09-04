@@ -2,7 +2,8 @@
 /**
  * handle_error - Function to handle errors and exit with the appropriate code
  * @fd_from: file from
- * fd_to: file to
+ * @fd_to: file to
+ * @argv: ...
  */
 void handle_error(int fd_from, int fd_to, char *argv[])
 {
@@ -21,6 +22,7 @@ void handle_error(int fd_from, int fd_to, char *argv[])
  * copy_file - Function to perform the file copy operation
  * @from_filename: ...
  * @to_filename: ...
+ * @args: ...
  * Return: sucess
  */
 int copy_file(char *from_filename, char *to_filename, char *args[])
