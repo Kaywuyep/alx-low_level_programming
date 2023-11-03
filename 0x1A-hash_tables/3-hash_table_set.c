@@ -16,10 +16,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (0);
-
 	/* Get the index where the key/value pair should be stored */
 	index = key_index((unsigned char *)key, ht->size);
-
 	/*Check for collision by iterating thru the linked list at the index*/
 	current = ht->array[index];
 	while (current != NULL)
@@ -36,12 +34,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		current = current->next;
 	}
-
 	/* If no collision or key doesn't exist, add a new node at beginning*/
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 		return (0);
-
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
 	if (new_node->key == NULL || new_node->value == NULL)
@@ -51,10 +47,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(new_node);
 		return (0);
 	}
-
 	/* Add the new node at the beginning of the linked list */
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
-
 	return (1); /* success */
 }
