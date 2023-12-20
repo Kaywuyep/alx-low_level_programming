@@ -19,7 +19,7 @@ def island_perimeter(grid):
                 # Count the perimeter for each side of the land cell
                 perimeter += 4
 
-                # Check adjacent cells and subtract 1 for each connected land cell
+                # Check adjacent cells and minus 1 for each connected land cell
                 if i > 0 and grid[i - 1][j] == 1:
                     perimeter -= 2
                 if j > 0 and grid[i][j - 1] == 1:
