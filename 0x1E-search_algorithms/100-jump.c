@@ -3,7 +3,7 @@
 
 /* remember compiling math.h with gcc requires `-lm` */
 /**
- * minimun_size - returns the minimum of two size_t values
+ * minimum_size - returns the minimum of two size_t values
  * @a: first value
  * @b: second value
  *
